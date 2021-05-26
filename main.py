@@ -2,7 +2,10 @@ import json
 import os
 import requests
 
-from auth_data import token
+from dotenv import load_dotenv
+
+load_dotenv()
+token = os.getenv('token')
 
 
 def get_wall_posts(group_name):
